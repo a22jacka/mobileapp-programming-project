@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">project</string>
+    <string name="about_page">About Page</string>
 </resources>
