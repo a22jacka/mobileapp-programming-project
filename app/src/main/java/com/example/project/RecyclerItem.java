@@ -1,5 +1,6 @@
 package com.example.project;
 
+@SuppressWarnings("WeakerAccess")
 public class RecyclerItem {
     private String name;
     private String color;
