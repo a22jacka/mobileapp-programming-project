@@ -7,12 +7,12 @@ public class Cat {
     @SerializedName("Size")
     private String weight;
     @SerializedName("Category")
-    private String Color;
+    private String color;
 
     public Cat(String name, String weight, String color) {
         this.name = name;
         this.weight = weight;
-        Color = color;
+        color = color;
     }
 
     public String getName() {
@@ -32,10 +32,10 @@ public class Cat {
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        color = color;
     }
 }
