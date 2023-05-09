@@ -9,13 +9,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -55,7 +59,22 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     public void onPostExecute(String json) {
         Gson gson = new Gson();
         Type type = new TypeToken<List<Cat>>() {}.getType();
-        List<Cat> catList = gson.fromJson(json, type);
-        //ArrayList<RecyclerItem> items = new ArrayList<>();
+        List<Cat> cats = gson.fromJson(json, type);
+        ArrayList<RecyclerItem> items = new ArrayList<>();
+
+        for (Cat cat : cats) {
+            items.add(new RecyclerItem(cat.getName(), cat.getWeight(), cat.getColor()));
+        }
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
+            @Override
+            public void onClick(RecyclerItem item) {
+                Toast.makeText(MainActivity.this, item.getName(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        RecyclerView recycler_view = findViewById(R.id.recyclerview);
+        recycler_view.setLayoutManager(new LinearLayoutManager(this));
+        recycler_view.setAdapter(adapter);
     }
 }
