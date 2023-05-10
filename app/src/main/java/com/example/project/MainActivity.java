@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
-    //trying 
+
     private boolean showWeb = true;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

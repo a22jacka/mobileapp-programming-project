@@ -4,15 +4,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Cat {
     private String name;
-    @SerializedName("Size")
+    @SerializedName("size")
     private String weight;
-    @SerializedName("Category")
+    @SerializedName("category")
     private String color;
 
     public Cat(String name, String weight, String color) {
         this.name = name;
         this.weight = weight;
-        color = color;
+        this.color = color;
     }
 
     public String getName() {
@@ -36,6 +36,6 @@ public class Cat {
     }
 
     public void setColor(String color) {
-        color = color;
+        this.color = color;
     }
 }
