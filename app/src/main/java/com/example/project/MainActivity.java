@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -48,10 +49,18 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
-
+    //trying 
+    private boolean showWeb = true;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        webview.loadUrl("file:///android_asset/web/about.html");
+        if (!showWeb) {
+            webview.setVisibility(View.GONE);
+            showWeb = true;
+        } else if (showWeb) {
+            webview.setVisibility(View.VISIBLE);
+            webview.loadUrl("file:///android_asset/web/about.html");
+            showWeb = false;
+        }
         return true;
     }
 
@@ -63,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         ArrayList<RecyclerItem> items = new ArrayList<>();
 
         for (Cat cat : cats) {
-            items.add(new RecyclerItem(cat.getName(), cat.getWeight(), cat.getColor()));
+            items.add(new RecyclerItem(cat.getName(), cat.getColor(), cat.getWeight()));
         }
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
