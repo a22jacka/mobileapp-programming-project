@@ -4,6 +4,7 @@ import static android.util.Log.d;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +27,7 @@ import java.util.List;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
-    WebView webview;
+
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22jacka";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        webview = findViewById(R.id.aboutWebView);
-        webview.setWebViewClient(new WebViewClient());
-        webview.getSettings().setJavaScriptEnabled(true);
 
 
         new JsonTask(this).execute(JSON_URL);
@@ -50,17 +48,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         return true;
     }
 
-    private boolean showWeb = true;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (!showWeb) {
-            webview.setVisibility(View.GONE);
-            showWeb = true;
-        } else if (showWeb) {
-            webview.setVisibility(View.VISIBLE);
-            webview.loadUrl("file:///android_asset/web/about.html");
-            showWeb = false;
-        }
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
         return true;
     }
 
