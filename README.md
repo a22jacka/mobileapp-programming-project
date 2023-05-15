@@ -1,27 +1,47 @@
 # mobileapp-programming-project
 #Skiss
 
+![img.png](img.png)
+Bild 1: Skiss på MainActivity
 
------------------------------------------------------
-I projektets README.md skall ni inkludera en skiss som beskriver appens olika screens under rubriken Skiss/design-idé
-Skissen kan med fördel göras med penna och papper (som fotas med mobiltelefon), men det är ok att använda digitala hjälpmedel så som Figma, Illustrator, eller liknande. Använd det verktyg som tar minst tid för dig att använda.
-Skissen behöver inte följas exakt vid implementationen, utan skall ses som en hjälp vid
-implementationen.
+![img_1.png](img_1.png)
+Bild 2: Skiss på AboutActivity
 
 #Webbtjänst - JSON
+Attributet name används för att lagra namnet på en viss katt.
+Category innehåller färgen på en katt. Att använda category för färg passade bäst men passar inte helt 
+så attributet kallas "color" i Cat.java klassen.
+Attributet size innehåller kattens vikt (i kg).Återigen passade size bäst men det förklarar inte allt
+så attributet har döpts om till "weight" i Cat.java klassen.
 
-
------------------------------------------------------
-I Github-projektets README.md skall ni inkludera en beskrivning av de JSON-objekt som er app 
-presenterar under rubriken Webbtjänst - JSON
-Inkludera en kodsnutt (prettyfied JSON) som innehåller ett exempel-objekt. Kom ihåg att använda 
-Markdown code-block.
-Beskriv kortfattat vad JSON-objektets olika attribut innehåller för information. Det räcker med 1-2 
-meningar per attribut.
-(Attributen ID och Login behöver inte beskrivas/förklaras)
+```
+{
+    [...]
+    "name":"Snowball",
+    [...]
+    "category":"White",
+    "size":3,
+    [...]
+}
+```
+Kod 1: Ett JSON objekt från datan. ID, login, och oanvända attribut visas ej
 
 #Implementationsexempel
+##Underribruk 1
 
+
+```
+
+```
+Kod 2: 
+
+
+##Underrubrik 2
+
+```
+
+```
+Kod 3:
 
 -----------------------------------------------------
 I Github-projektets README.md skall ni inkludera 2-3 implementationsdetaljer under rubriken
