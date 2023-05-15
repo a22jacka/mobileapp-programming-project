@@ -1,5 +1,5 @@
 # mobileapp-programming-project
-#Skiss
+# Skiss
 
 ![img.png](img.png)
 Bild 1: Skiss på MainActivity
@@ -7,11 +7,11 @@ Bild 1: Skiss på MainActivity
 ![img_1.png](img_1.png)
 Bild 2: Skiss på AboutActivity
 
-#Webbtjänst - JSON
+# Webbtjänst - JSON
 Attributet name används för att lagra namnet på en viss katt.
 Category innehåller färgen på en katt. Att använda category för färg passade bäst men passar inte helt 
 så attributet kallas "color" i Cat.java klassen.
-Attributet size innehåller kattens vikt (i kg).Återigen passade size bäst men det förklarar inte allt
+Attributet size innehåller kattens vikt (i kg). Återigen passade size bäst men det förklarar inte allt
 så attributet har döpts om till "weight" i Cat.java klassen.
 
 ```
@@ -26,8 +26,9 @@ så attributet har döpts om till "weight" i Cat.java klassen.
 ```
 Kod 1: Ett JSON objekt från datan. ID, login, och oanvända attribut visas ej
 
-#Implementationsexempel
-##Underribruk 1
+# Implementationsexempel
+
+## Underribruk 1
 
 
 ```
@@ -36,7 +37,7 @@ Kod 1: Ett JSON objekt från datan. ID, login, och oanvända attribut visas ej
 Kod 2: 
 
 
-##Underrubrik 2
+## Underrubrik 2
 
 ```
 
@@ -60,7 +61,7 @@ viktig buggfix gjordes
 ● Kom ihåg att referera till kodsnutt/kodsnuttar och screenshot(s) i den korta beskrivningen av
 implementationsdetaljen
 
-#Reflektion
+# Reflektion
 
 
 -----------------------------------------------------
