@@ -34,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
-        holder.weight.setText(items.get(position).getWeight());
+        holder.weight.setText(items.get(position).getWeight().toString());
         holder.color.setText(items.get(position).getColor());
     }
 

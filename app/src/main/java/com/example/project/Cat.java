@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName;
 public class Cat {
     private String name;
     @SerializedName("size")
-    private String weight;
+    private int weight;
     @SerializedName("category")
     private String color;
 
-    public Cat(String name, String weight, String color) {
+    public Cat(String name, int weight, String color) {
         this.name = name;
         this.weight = weight;
         this.color = color;
@@ -23,11 +23,11 @@ public class Cat {
         this.name = name;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 

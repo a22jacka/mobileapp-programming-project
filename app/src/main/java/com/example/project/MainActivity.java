@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         ArrayList<RecyclerItem> items = new ArrayList<>();
 
         for (Cat cat : cats) {
-            items.add(new RecyclerItem(cat.getName(), cat.getColor(), cat.getWeight()));
+            items.add(new RecyclerItem(cat.getName(), cat.getColor(), String.valueOf(cat.getWeight())));
         }
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
