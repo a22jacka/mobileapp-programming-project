@@ -114,3 +114,7 @@ Bild 4: Bild på Toolbar-menyn
 
 ![](https://github.com/a22jacka/mobileapp-programming-project/commit/b17aa5e2ff05fbac4350706df5b3ba950ba3be0f)
 I denna commit så var själva menyn klar. Inget var inlaggt i den men själva menyn fungerade.
+
+![](img_4.png)
+
+![](img_5.png)
